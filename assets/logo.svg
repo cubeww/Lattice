@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 32 32" fill="none">
+  <title>Lattice</title>
+  <path d="M16 3 28 10v13l-12 7L4 23V10L16 3Z" stroke="#177f75" stroke-width="1.7" />
+  <path d="m4 10 12 7 12-7M16 17v13M16 3v14L4 23m12-6 12 6" stroke="#177f75" stroke-width="1.5" />
+</svg>

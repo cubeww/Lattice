@@ -1,0 +1,239 @@
+.form-submenu-anchor {
+  position: relative;
+}
+.menu-popover.form-submenu {
+  left: calc(100% + 3px);
+  top: -5px;
+  min-width: 370px;
+  max-width: min(620px, 65vw);
+}
+.form-submenu::before {
+  content: '';
+  position: absolute;
+  left: -9px;
+  top: 0;
+  width: 9px;
+  height: 100%;
+}
+.menu-popover.form-submenu button {
+  font-size: 12px;
+  gap: 16px;
+  min-height: 31px;
+}
+.menu-popover.form-submenu button span {
+  flex: 1;
+}
+.menu-separator {
+  height: 1px;
+  background: var(--line);
+  margin: 5px 3px;
+}
+.form-window {
+  position: fixed;
+  z-index: 750;
+  width: 410px;
+  max-width: calc(100vw - 24px);
+  background: #f8fafc;
+  border: 1px solid #bdc9d0;
+  border-radius: 7px;
+  box-shadow: 0 10px 35px #25384935;
+  overflow: hidden;
+}
+.form-window > header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line);
+  background: #f0f4f6;
+  cursor: move;
+  touch-action: none;
+}
+.form-window h2 {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.4;
+}
+.form-window header button {
+  display: flex;
+  padding: 3px;
+}
+.form-window-body {
+  padding: 15px;
+  max-height: calc(100vh - 310px);
+  overflow: auto;
+}
+.form-window fieldset {
+  min-width: 0;
+  margin: 0;
+  border: 0;
+}
+.form-window fieldset fieldset {
+  padding: 0;
+}
+.form-window .property {
+  margin: 8px 0 15px;
+}
+.form-window .radio-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0;
+  font-size: 12px;
+}
+.form-window input[type='checkbox'],
+.form-window input[type='radio'] {
+  accent-color: #659d91;
+  flex: none;
+  width: 14px;
+  height: 14px;
+}
+.form-window input[type='number'],
+.form-window select {
+  min-width: 0;
+  width: 100%;
+  padding: 6px 8px;
+  background: white;
+  border: 1px solid #d9e1e6;
+  border-radius: 4px;
+  color: inherit;
+  font-size: 12px;
+}
+.form-window select {
+  text-overflow: ellipsis;
+}
+.form-window footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 12px 15px;
+  border-top: 1px solid var(--line);
+}
+.form-window footer button {
+  padding: 7px 20px;
+  border: 1px solid #d0dce0;
+  border-radius: 4px;
+}
+.form-window button.primary {
+  color: #fff;
+  background: #659d91;
+  border-color: #659d91;
+}
+.form-hint {
+  font-size: 11px;
+  color: #8a97a3;
+  line-height: 1.65;
+  margin: 10px 0;
+}
+.form-muted {
+  color: #91a0aa;
+  font-size: 11px;
+}
+.form-indent {
+  margin-left: 20px !important;
+}
+.form-target-heading,
+.form-target {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: 12px;
+}
+.form-target-heading {
+  font-size: 11px;
+  color: #91a0aa;
+  margin-bottom: 5px;
+}
+.form-targets {
+  max-height: 240px;
+  overflow: auto;
+}
+.form-target {
+  padding: 6px 0;
+  font-size: 12px;
+}
+.form-target > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.form-blend {
+  display: block;
+  margin: 16px 0;
+  font-size: 12px;
+}
+.form-blend > div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 8px;
+}
+.form-blend input[type='range'] {
+  flex: 1;
+  min-width: 80px;
+  accent-color: #6c9d92;
+}
+.form-blend input[type='number'] {
+  width: 68px;
+}
+.form-number {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.form-parameter-heading {
+  font-size: 12px;
+  margin-top: 15px;
+}
+.form-parameters {
+  max-height: 165px;
+  min-height: 50px;
+  overflow: auto;
+  background: white;
+  border: 1px solid #e0e6eb;
+  border-radius: 4px;
+  margin-top: 8px;
+  padding: 0 10px;
+}
+.form-error {
+  font-size: 12px;
+  color: #b05252;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.form-special {
+  width: 450px;
+  z-index: 740;
+}
+.form-special-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--line);
+  padding: 0 8px;
+}
+.form-special-tabs button {
+  padding: 10px 7px;
+  font-size: 11px;
+  border-bottom: 2px solid transparent;
+}
+.form-special-tabs button[aria-selected='true'] {
+  color: #548e80;
+  border-bottom-color: #659d91;
+}
+.form-notice {
+  position: fixed;
+  bottom: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 850;
+  padding: 10px 20px;
+  background: #f3f8f6;
+  color: #548e80;
+  border: 1px solid #bed8d0;
+  border-radius: 5px;
+  box-shadow: 0 4px 18px #25384920;
+  font-size: 12px;
+}

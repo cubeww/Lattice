@@ -1,0 +1,11 @@
+references/
+node_modules/
+out/
+dist/
+.generated/
+release/
+artifacts/
+output/
+src/renderer/public/vendor/
+AGENTS.md
+package-lock.json

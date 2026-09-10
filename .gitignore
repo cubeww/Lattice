@@ -1,0 +1,69 @@
+# Dependencies and tool caches
+node_modules/
+.npm/
+.cache/
+.vite/
+*.tsbuildinfo
+
+# Generated code and application builds
+/.generated/
+/out/
+/dist/
+/release/
+/src/renderer/public/vendor/
+
+# Local reference editor, SDK, and sample models
+/references/
+
+# Local development instructions, documentation, tests, and scripts
+/AGENTS.md
+/docs/
+/tests/
+/scripts/
+
+# Modeling deliveries, previews, and verification artifacts
+/output/
+/artifacts/
+
+# Test and coverage reports
+/coverage/
+/.nyc_output/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+playwright.config.ts
+
+# Logs and performance captures
+*.log
+*.cpuprofile
+*.heapprofile
+*.heapsnapshot
+
+# Local environment values and MCP connection tokens
+.env
+.env.*
+!.env.example
+!.env.*.example
+bridge.json
+
+# Editor state; keep shareable VS Code configuration available
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
+*.swp
+*.swo
+*~
+
+# Temporary files and OS metadata
+/tmp/
+/temp/
+*.tmp
+*.temp
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini

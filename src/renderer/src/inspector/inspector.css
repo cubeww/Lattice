@@ -1,0 +1,229 @@
+.inspector {
+  font-size: 11px;
+  padding-bottom: 12px;
+}
+.inspector .object-heading {
+  margin-bottom: 12px;
+}
+.inspector h3 {
+  color: #8591a1;
+  font-size: 10px;
+  font-weight: 500;
+  margin: 16px 0 9px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #e5e9ee;
+}
+.inspector-property {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+  margin: 0 0 7px;
+}
+.inspector-property > span {
+  flex: 0 0 86px;
+  text-align: right;
+  color: #728094;
+  line-height: 1.35;
+}
+.inspector-property input,
+.inspector-property select,
+.inspector-property textarea,
+.inspector-property output,
+.inspector-mask-button {
+  width: 100%;
+  min-width: 0;
+  min-height: 26px;
+  padding: 4px 6px;
+  border: 1px solid #dfe5ec;
+  border-radius: 3px;
+  background: #fff;
+  color: #445569;
+  font: inherit;
+}
+.inspector-property input[type='number'] {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.inspector-unit {
+  color: #8d99a8;
+  min-width: 9px;
+  font-size: 10px;
+}
+.inspector-property output {
+  border-color: transparent;
+  background: #f2f5f8;
+}
+.inspector-property input:disabled,
+.inspector-property select:disabled,
+.inspector-property textarea:disabled {
+  background: #f1f4f7;
+  color: #9aa5b4;
+}
+.inspector-property input[aria-invalid='true'],
+.inspector-property textarea[aria-invalid='true'] {
+  border-color: #df706c;
+}
+.inspector-property :is(input, select, textarea):focus {
+  outline: 1px solid #73a99d;
+  border-color: #73a99d;
+}
+.inspector-property input::placeholder {
+  color: #a0a9b7;
+  font-style: italic;
+}
+.inspector-check {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 7px 0 9px 93px;
+  color: #5d6c7f;
+}
+.inspector-check input {
+  margin: 0;
+  accent-color: #73a99d;
+}
+.inspector-color-row {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  margin-bottom: 7px;
+}
+.inspector-color-row .inspector-property {
+  flex: 1;
+  margin: 0;
+  gap: 7px;
+}
+.inspector-color-row input {
+  font-size: 10px;
+  padding-inline: 4px;
+}
+.inspector-swatch {
+  flex: 0 0 21px;
+  height: 21px;
+  border: 1px solid #c9d2db;
+  border-radius: 3px;
+}
+.inspector-color-row .icon-button {
+  width: 23px;
+  height: 24px;
+  flex: 0 0 23px;
+}
+.inspector-notice {
+  color: #8591a1;
+  font-size: 10px;
+  line-height: 1.6;
+  margin: 8px 0;
+}
+.inspector-mask-button {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+  cursor: pointer;
+}
+.inspector-action {
+  display: block;
+  width: calc(100% - 93px);
+  margin: 0 0 9px 93px;
+  padding: 5px;
+  border: 1px solid #dfe5ec;
+  border-radius: 3px;
+  background: white;
+  color: #59796f;
+  font: inherit;
+}
+.inspector-data {
+  border-top: 1px solid #e5e9ee;
+  margin-top: 12px;
+  padding-top: 9px;
+}
+.inspector-data summary {
+  cursor: pointer;
+  color: #728094;
+  margin-bottom: 8px;
+}
+.inspector-multiline {
+  display: block;
+}
+.inspector-multiline > span {
+  display: none;
+}
+.inspector-multiline textarea {
+  resize: vertical;
+}
+.inspector-stats {
+  display: flex;
+  justify-content: space-between;
+  margin: 14px 0 0;
+  padding-top: 9px;
+  border-top: 1px solid #e5e9ee;
+  color: #929dac;
+  font-variant-numeric: tabular-nums;
+}
+.inspector-dialog {
+  width: 400px;
+  max-width: 90vw;
+  padding: 20px;
+  border-radius: 8px;
+  background: #f9fbfd;
+  box-shadow: 0 18px 60px #26374b36;
+  color: #445569;
+  font-size: 12px;
+}
+.inspector-dialog h2 {
+  margin: 0 0 16px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.inspector-dialog > input {
+  width: 100%;
+  border: 1px solid #dfe5ec;
+  border-radius: 3px;
+  padding: 7px;
+  color: inherit;
+  background: white;
+}
+.inspector-mask-list {
+  max-height: 300px;
+  min-height: 100px;
+  overflow: auto;
+  margin: 10px 0;
+}
+.inspector-mask-list label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px;
+}
+.inspector-mask-list small {
+  display: block;
+  font-size: 10px;
+  color: #96a1af;
+}
+.inspector-dialog footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 16px;
+}
+.inspector-dialog footer button {
+  border: 1px solid #dfe5ec;
+  border-radius: 4px;
+  padding: 6px 17px;
+  color: inherit;
+  background: white;
+}
+.inspector-dialog footer .primary {
+  background: #739c90;
+  color: white;
+  border-color: #739c90;
+}
+.inspector-color-dialog {
+  width: 280px;
+}
+.inspector-color-dialog input[type='color'] {
+  height: 70px;
+  padding: 2px;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,82 @@
+{
+  "name": "lattice",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A cross-platform Live2D editor",
+  "author": "Cube",
+  "license": "MIT",
+  "type": "module",
+  "main": "out/main/index.js",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "npm run typecheck && electron-vite build && tsup src/mcp/index.ts --format esm --out-dir out/mcp --no-splitting",
+    "start": "electron-vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "format": "prettier --write src *.json *.ts *.md",
+    "pack": "npm run build && electron-builder --dir"
+  },
+  "build": {
+    "appId": "dev.lattice.editor",
+    "productName": "Lattice",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "out/**/*",
+      "package.json",
+      "LICENSE",
+      "THIRD_PARTY_NOTICES.md"
+    ],
+    "asar": true,
+    "win": {
+      "icon": "assets/logo.svg",
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg",
+      "category": "public.app-category.graphics-design"
+    },
+    "linux": {
+      "target": "AppImage",
+      "category": "Graphics"
+    }
+  },
+  "dependencies": {
+    "@kninnug/constrainautor": "^4.1.0",
+    "@modelcontextprotocol/server": "^2.0.0",
+    "@xmldom/xmldom": "^0.9.12",
+    "ag-psd": "^31.0.2",
+    "d3-contour": "^4.0.2",
+    "delaunator": "^5.1.0",
+    "dockview-react": "^8.2.0",
+    "fflate": "^0.8.3",
+    "lucide-react": "^1.42.0",
+    "pngjs": "^7.0.0",
+    "potpack": "^2.1.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "^2.0.0",
+    "@playwright/test": "^1.63.0",
+    "@types/d3-contour": "^3.0.6",
+    "@types/delaunator": "^5.0.3",
+    "@types/node": "^26.4.1",
+    "@types/pngjs": "^6.0.5",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^5.2.0",
+    "electron": "^44.2.0",
+    "electron-builder": "^26.15.3",
+    "electron-vite": "^5.0.0",
+    "prettier": "^3.9.6",
+    "tsup": "^8.5.1",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2",
+    "vite": "^7.3.6",
+    "vitest": "^5.0.0"
+  }
+}
