@@ -104,18 +104,17 @@ export function readSourceScene(
       };
     });
     const keysByForm = new Map<string, number[]>();
-    for (const item of g.list(grid, 'keyformsOnGrid')) {
-      const access = g.field(item, 'accessKey');
-      const keys = Array(bindings.length).fill(-1) as number[];
-      for (const k of g.list(access, '_keyOnParameterList')) {
-        const index = bindingNodes.indexOf(g.field(k, 'binding')!);
-        if (index < 0) throw new Error('Invalid keyform binding reference.');
-        keys[index] = g.number(k, 'keyIndex', -1);
-      }
-      if (
-        keys.some((key, i) => !Number.isInteger(key) || key < 0 || key >= bindings[i].keys.length)
-      )
-        throw new Error('Invalid keyform grid coordinates.');
+    // Cubism indexes this list with the first binding varying fastest. Access-key
+    // labels can disagree with its order; using those labels selects different
+    // forms from the native editor, especially at combined-parameter corners.
+    for (const [cell, item] of g.list(grid, 'keyformsOnGrid').entries()) {
+      let index = cell;
+      const keys = bindings.map((binding) => {
+        const key = index % binding.keys.length;
+        index = Math.floor(index / binding.keys.length);
+        return key;
+      });
+      if (index !== 0) throw new Error('Invalid keyform grid coordinates.');
       keysByForm.set(g.guid(g.field(item, 'keyformGuid'))!, keys);
     }
     // A source can retain unbound forms (e.g. editing history). The grid is
