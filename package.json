@@ -8,9 +8,9 @@
   "type": "module",
   "main": "out/main/index.js",
   "scripts": {
-    "dev": "electron-vite dev",
+    "dev": "install-electron && electron-vite dev",
     "build": "npm run typecheck && electron-vite build && tsup src/mcp/index.ts --format esm --out-dir out/mcp --no-splitting",
-    "start": "electron-vite preview",
+    "start": "install-electron && electron-vite preview",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:e2e": "playwright test",

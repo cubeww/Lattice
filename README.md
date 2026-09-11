@@ -20,6 +20,8 @@ npm ci
 npm run dev
 ```
 
+首次启动会通过 Electron 官方安装器下载运行时，需要联网；后续启动会复用已安装的版本。
+
 ```sh
 npm run build   # 类型检查与构建
 npm start       # 运行生产构建
@@ -29,5 +31,3 @@ npm run pack    # 打包当前平台应用
 ## 当前状态
 
 项目仍在开发中，尚未覆盖全部 Cubism 特性，暂不支持动画编辑和 `.moc3` 编译导出。
-
-由 Cube 开发，采用 [MIT](LICENSE) 许可证。第三方资源说明见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
